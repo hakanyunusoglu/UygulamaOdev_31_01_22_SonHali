@@ -1,0 +1,53 @@
+﻿@model UygulamaOdev_31_01_22.Models.UrunModel
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-4">
+        <div class="tm-paging-links">
+            <nav>
+                <ul style="list-style: none;">
+
+                    @if (Model.urunler.KategoriID == 1)
+                    {
+                <li><a href="#" class="tm-paging-link active">Pizza</a></li>
+                <li><a href="#" class="tm-paging-link">Salata</a></li>
+                <li><a href="#" class="tm-paging-link">Noodle</a></li>
+}
+                    else if (Model.urunler.KategoriID == 2)
+                    {
+                <li><a href="#" class="tm-paging-link">Pizza</a></li>
+                <li><a href="#" class="tm-paging-link active">Salata</a></li>
+                <li><a href="#" class="tm-paging-link">Noodle</a></li>
+}
+                    else if (Model.urunler.KategoriID == 3)
+                    {
+                <li><a href="#" class="tm-paging-link">Pizza</a></li>
+                <li><a href="#" class="tm-paging-link">Salata</a></li>
+                <li><a href="#" class="tm-paging-link active">Noodle</a></li>}
+                </ul>
+            </nav>
+        </div>           
+        </div>
+         <article class="col-lg-6">
+                <figure class="tm-person">
+                    <img src="~/Content/img/gallery/@Model.urunler.UrunResim" alt="Image" class="img-fluid tm-person-img" />
+                    <figcaption class="tm-person-description">
+                        <h4 class="tm-person-name">@Model.urunler.UrunAd</h4>
+                        <p class="tm-person-title">@Model.urunler.Kategori.KategoriAD</p>
+                        <p class="tm-person-about">
+                            @Model.urunler.UrunAciklama
+                        </p>
+                        <div>
+                            <p class="tm-gallery-price">@String.Format(new System.Globalization.CultureInfo("tr-TR"), "{0:c2}", Model.urunler.Fiyat)</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+    </div>
+       
+</div>
