@@ -220,6 +220,7 @@
     <Content Include="Views\Tarihce\Tarihce.cshtml" />
     <Content Include="Views\Urun\Detay.cshtml" />
     <Content Include="Views\Iletisim\Iletisim.cshtml" />
+    <Content Include="sinavdb.bak" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
